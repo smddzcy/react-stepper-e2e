@@ -20,27 +20,30 @@ exports.config = {
     os_version: 'Mojave',
     browserName: 'Chrome',
   },
-  // {
-  //   browserName: 'firefox',
-  // }, {
-  //   browserName: 'ie-11',
-  // }, {
-  //   browserName: 'safari',
-  // }
+  {
+    browserName: 'IE',
+    browser_version: '11.0',
+  }, {
+    browserName: 'iPhone',
+    device: 'iPhone 8',
+    realMobile: 'true',
+    os_version: '11.0',
+  },
   ],
 
   logLevel: 'command',
   coloredLogs: true,
   screenshotPath: './errorShots/',
   baseUrl: '',
-  waitforTimeout: 30000,
-  connectionRetryTimeout: 90000,
+  waitforTimeout: 10000,
+  aitforInterval: 250,
+  connectionRetryTimeout: 60000,
   connectionRetryCount: 3,
   host: 'hub.browserstack.com',
 
   framework: 'mocha',
   mochaOpts: {
     ui: 'bdd',
-    timeout: 60000,
+    timeout: 40000,
   },
 };
