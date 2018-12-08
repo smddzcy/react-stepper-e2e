@@ -15,23 +15,26 @@ exports.config = {
     build: 'webdriver-browserstack',
   },
 
-  capabilities: [{
-    os: 'OS X',
-    os_version: 'Mojave',
-    browserName: 'Chrome',
-  },
-  {
-    browserName: 'IE',
-    browser_version: '11.0',
-  }, {
-    browserName: 'iPhone',
-    device: 'iPhone 8',
-    realMobile: 'true',
-    os_version: '11.0',
-  },
+  capabilities: [
+    {
+      os: 'OS X',
+      os_version: 'Mojave',
+      browserName: 'Chrome',
+    },
+    {
+      browserName: 'IE',
+      browser_version: '11.0',
+    },
+    // {
+    //   browserName: 'iPhone',
+    //   device: 'iPhone 8',
+    //   realMobile: 'true',
+    //   os_version: '11.0',
+    // },
   ],
 
-  logLevel: 'command',
+  execArgv: ['--inspect'],
+  logLevel: 'result',
   coloredLogs: true,
   screenshotPath: './errorShots/',
   baseUrl: '',
