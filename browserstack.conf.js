@@ -33,7 +33,6 @@ exports.config = {
     // },
   ],
 
-  execArgv: ['--inspect'],
   logLevel: 'result',
   coloredLogs: true,
   screenshotPath: './errorShots/',
